@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de cadastro para ser voluntário ou doador da ONG Exemplo.">
+    <title>Cadastro - Seja um Voluntário ou Doador - ONG Exemplo</title>
+</head>
+<body>
+    <header>
+        <h1>Cadastre-se e Junte-se à Nossa Causa</h1>
+        <nav aria-label="Navegação de Cadastro">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="formulario-cadastro">
+            <h2>Formulário de Inscrição</h2>
+            <p>Seja você um voluntário dedicado ou um apoiador fundamental, preencha o formulário abaixo.</p>
+
+            <form action="processa_cadastro.php" method="post">
+                
+                <fieldset>
+                    <legend>Dados Pessoais (Obrigatórios)</legend>
+                    
+                    <label for="nome_completo">Nome Completo:</label>
+                    <input type="text" id="nome_completo" name="nome_completo" 
+                           placeholder="Seu nome completo" required 
+                           pattern="[A-Za-zÀ-ÿ\s]+" 
+                           title="Use apenas letras e espaços.">
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" 
+                           placeholder="seu.email@exemplo.com" required>
+
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" 
+                           placeholder="999.999.999-99" required 
+                           pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" 
+                           title="Formato exigido: 999.999.999-99">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" 
+                           placeholder="(99) 99999-9999" required 
+                           pattern="\(\d{2}\) \d{4,5}-\d{4}" 
+                           title="Formato exigido: (99) 99999-9999 ou (99) 9999-9999.">
+
+                    <label for="data_nascimento">Data de Nascimento:</label>
+                    <input type="date" id="data_nascimento" name="data_nascimento" required>
+                    
+                </fieldset>
+
+                <fieldset>
+                    <legend>Dados de Endereço</legend>
+                    
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" name="cep" 
+                           placeholder="99999-999" required 
+                           pattern="\d{5}-\d{3}" 
+                           title="Formato exigido: 99999-999">
+
+                    <label for="endereco">Rua e Número:</label>
+                    <input type="text" id="endereco" name="endereco" placeholder="Rua, Av. e Número" required>
+
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade" required>
+
+                    <label for="estado">Estado:</label>
+                    <select id="estado" name="estado" required>
+                        <option value="">Selecione o Estado</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Como Você Deseja Ajudar?</legend>
+                    
+                    <p>Selecione seu perfil principal:</p>
+                    <input type="radio" id="voluntario_radio" name="perfil" value="voluntario" required>
+                    <label for="voluntario_radio">Voluntário</label><br>
+
+                    <input type="radio" id="doador_radio" name="perfil" value="doador">
+                    <label for="doador_radio">Doador/Apoiador</label><br>
+                    
+                    <input type="radio" id="ambos_radio" name="perfil" value="ambos">
+                    <label for="ambos_radio">Ambos</label>
+                    
+                    <p>Áreas de Interesse (Voluntário):</p>
+                    <input type="checkbox" id="interesse_educacao" name="interesse[]" value="educacao">
+                    <label for="interesse_educacao">Educação</label><br>
+
+                    <input type="checkbox" id="interesse_saude" name="interesse[]" value="saude">
+                    <label for="interesse_saude">Saúde Comunitária</label><br>
+
+                    <input type="checkbox" id="interesse_administrativo" name="interesse[]" value="administrativo">
+                    <label for="interesse_administrativo">Administrativo/Logística</label>
+                </fieldset>
+
+                <p>
+                    <input type="checkbox" id="termos" name="termos" required>
+                    <label for="termos">Li e concordo com os <a href="#" target="_blank">Termos de Uso e Política de Privacidade</a>.</label>
+                </p>
+
+                <input type="submit" value="Finalizar Cadastro">
+                <input type="reset" value="Limpar Formulário">
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Seu cadastro é o primeiro passo para uma grande mudança!</p>
+    </footer>
+</body>
+</html>

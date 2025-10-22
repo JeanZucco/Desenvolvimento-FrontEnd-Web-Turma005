@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça todos os projetos sociais da ONG Exemplo. Saiba como ser voluntário ou realizar doações online.">
+    <title>Projetos Sociais e Doações - ONG Exemplo</title>
+</head>
+<body>
+    <header>
+        <h1>Projetos Sociais e Oportunidades</h1>
+        <nav aria-label="Navegação Secundária">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="cadastro.html">Cadastre-se</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lista-projetos">
+            <h2>Nossos Projetos em Destaque</h2>
+            <article class="projeto" data-categoria="educacao">
+                <h3>Projeto A: Educação para o Futuro</h3>
+                <p>Oferece reforço escolar e atividades extracurriculares para crianças e adolescentes em situação de vulnerabilidade.</p>
+                <figure>
+                    <img src="img/projeto-social.png" alt="Foto de crianças em sala de aula participando de uma atividade lúdica e educacional.">
+                    <figcaption>Crianças aprendendo e se desenvolvendo.</figcaption>
+                </figure>
+                <dl>
+                    <dt>Alunos Atendidos</dt>
+                    <dd>+500</dd>
+                    <dt>Taxa de Sucesso</dt>
+                    <dd>95%</dd>
+                </dl>
+                <a href="#detalhes-projeto-a">Ver Detalhes</a>
+            </article>
+
+            <article class="projeto" data-categoria="saude">
+                <h3>Projeto B: Saúde Comunitária</h3>
+                <p>Promove a conscientização sobre saúde básica e oferece acesso a exames preventivos na comunidade.</p>
+                <a href="#detalhes-projeto-b">Ver Detalhes</a>
+            </article>
+            
+        </section>
+
+        <section id="voluntariado">
+            <h2>Portal de Oportunidades de Voluntariado</h2>
+            <p>Encontre a causa que te move! Seja um mentor, um organizador de eventos ou nos ajude na logística.</p>
+            
+            <dl>
+                <dt>Mentor de Matemática (Presencial)</dt>
+                <dd>Requisito: Nível superior. Dedicação: 4h/semana.</dd>
+                <dt>Fotógrafo Voluntário (Eventual)</dt>
+                <dd>Requisito: Equipamento próprio. Dedicação: Eventos esporádicos.</dd>
+            </dl>
+            <p>Interessado? Preencha nosso formulário de inscrição de voluntários.</p>
+            <a href="cadastro.html?perfil=voluntario">Inscreva-se Agora</a>
+        </section>
+
+        <section id="doacoes">
+            <h2>Apoie Nossas Campanhas de Arrecadação</h2>
+            <article class="campanha">
+                <h3>Campanha: Material Escolar 2026</h3>
+                <p>Ajude-nos a garantir que todas as crianças tenham material de qualidade para o próximo ano letivo.</p>
+                <p>Meta: R$ 50.000,00 | Arrecadado: R$ 35.000,00 (70%)</p>
+                <label for="progresso-campanha">Progresso da Meta</label>
+                <progress id="progresso-campanha" value="70" max="100">70%</progress>
+                
+                <form action="processa_doacao.php" method="post">
+                    <fieldset>
+                        <legend>Doação Rápida</legend>
+                        <label for="valor">Valor da Doação (R$):</label>
+                        <input type="number" id="valor" name="valor" min="10.00" step="0.01" required>
+                        <input type="submit" value="Doar Agora">
+                    </fieldset>
+                    <input type="hidden" name="campanha" value="material_escolar_2026">
+                </form>
+            </article>
+
+            <aside aria-labelledby="prestacao-titulo">
+                <h3 id="prestacao-titulo">Relatórios de Aplicação</h3>
+                <p>Veja a prestação de contas de campanhas anteriores.</p>
+                <a href="img/relatorio.pdf" target="_blank" rel="external">Ver Relatórios Anuais</a>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <p>Apoie a ONG Exemplo e faça parte desta transformação.</p>
+    </footer>
+</body>
+</html>
