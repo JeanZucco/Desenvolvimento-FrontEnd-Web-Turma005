@@ -3,82 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página inicial da ONG Exemplo. Conheça nossa missão, visão, valores e como nos ajudar.">
-    <meta name="keywords" content="ONG, doação, voluntariado, projetos sociais, impacto social">
-    <title>Início - ONG Exemplo: Transformando Vidas</title>
-    </head>
+    <title>ONG Exemplo: Transformando Vidas através da Educação</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
 <body>
     <header>
-        <h1>ONG Exemplo</h1>
-        <nav aria-label="Navegação Principal">
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html">Projetos Sociais</a></li>
-                <li><a href="cadastro.html">Quero Ajudar</a></li>
-                <li><a href="#contato">Contato</a></li>
+        <div class="container flex-group--space-between">
+            <h1><a href="index.html">ONG Exemplo</a></h1>
+            <button class="hamburger-menu" aria-label="Abrir menu de navegação">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li class="dropdown">
+                        <a href="#sobre-nos" class="dropbtn">Sobre Nós</a>
+                        <div class="dropdown-content">
+                            <a href="#missao">Missão</a>
+                            <a href="#valores-historico">Valores e Histórico</a>
+                            <a href="#equipe">Nossa Equipe</a>
+                        </div>
+                    </li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="cadastro.html" class="btn btn-secondary">Cadastre-se</a></li>
                 </ul>
-        </nav>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section id="missao">
-            <h2>Nossa Missão: Onde a Ajuda Acontece</h2>
-            <p>Há mais de 10 anos, a ONG Exemplo atua com o objetivo de <mark>transformar realidades através da educação e do apoio comunitário</mark>.</p>
-
-            <figure>
-                <img src="img/equipe-voluntarios.png" alt="Foto da equipe de voluntários da ONG trabalhando juntos em um projeto comunitário.">
-                <figcaption>Nossa Equipe, Nossos Heróis.</figcaption>
-            </figure>
+        <section id="hero" class="container" style="text-align: center; padding-top: 60px; padding-bottom: 60px;">
+            <div class="grid-container flex-group--center">
+                <div class="col-md-12 col-lg-8">
+                    <h2>Construindo um Futuro Melhor Juntos</h2>
+                    <p>Através da educação e apoio comunitário, a ONG Exemplo transforma realidades, empoderando indivíduos e comunidades por mais de 10 anos.</p>
+                    <div class="flex-group--center">
+                        <a href="projetos.html" class="btn btn-primary">Conheça Nossos Projetos</a>
+                        <a href="cadastro.html" class="btn btn-outline-primary">Seja um Voluntário</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="valores-historico">
-            <h2>Nossos Valores e Histórico</h2>
-            <article>
-                <h3>Visão e Valores</h3>
-                <p>Nossa base é a transparência, o respeito e o impacto social duradouro. Queremos ser a referência em gestão de projetos sociais.</p>
-                <ul>
-                    <li>Transparência</li>
-                    <li>Comprometimento</li>
-                    <li>Inovação Social</li>
-                </ul>
-            </article>
-
-            <aside aria-labelledby="transparencia-titulo">
-                <h3 id="transparencia-titulo">Prestação de Contas</h3>
-                <p>Acesse nossos relatórios anuais e veja como sua doação é aplicada.</p>
-                <a href="documentos/relatorio_2024.pdf" target="_blank">Baixar Relatório 2024 (PDF)</a>
-            </aside>
+        <section id="missao" class="container">
+            <div class="grid-container flex-group--align-start">
+                <div class="col-md-12 col-lg-6">
+                    <h2 id="missao">Nossa Missão: Onde a Ajuda Acontece</h2>
+                    <p>Há mais de 10 anos, a ONG Exemplo atua com o objetivo de **transformar realidades através da educação e do apoio comunitário.** Acreditamos que o acesso à educação de qualidade e o suporte social são pilares fundamentais para o desenvolvimento sustentável.</p>
+                    <p>Nossa dedicação vai além do ensino, criando um ambiente onde cada indivíduo se sente valorizado e capaz de alcançar seu potencial máximo. Junte-se a nós nesta jornada de impacto social.</p>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <figure>
+                        <img src="img/equipe-voluntarios.png" alt="Foto da equipe de voluntários da ONG trabalhando juntos em um projeto comunitário.">
+                        <figcaption>Nossa Equipe, Nossos Heróis.</figcaption>
+                    </figure>
+                </div>
+            </div>
         </section>
 
-        <section id="chamada-acao">
-            <h2>Faça a Diferença!</h2>
-            <p>Junte-se a nós como voluntário ou apoiador. Toda ajuda é vital para o nosso trabalho.</p>
-            <a href="projetos.html">Veja Nossos Projetos</a>
-            <a href="cadastro.html">Quero ser Voluntário/Doador</a>
+        <section id="valores-historico" class="container">
+            <div class="grid-container">
+                <article class="col-md-12 col-lg-6">
+                    <h2 id="valores-historico">Nossos Valores e Histórico</h2>
+                    <h3>Visão e Valores:</h3>
+                    <p>Nossa base é a transparência, o respeito e o impacto social duradouro. Queremos ser a referência em gestão de projetos sociais.</p>
+                    <ul>
+                        <li>Transparência: Prestamos contas de cada recurso.</li>
+                        <li>Comprometimento: Dedicação total às causas que abraçamos.</li>
+                    </ul>
+                </article>
+                <article class="col-md-12 col-lg-6">
+                    <h3>Nosso Histórico de Impacto:</h3>
+                    <p>Desde a fundação, a ONG Exemplo já impactou a vida de milhares de pessoas. Nosso crescimento é reflexo da confiança de nossos apoiadores e da dedicação incansável dos voluntários.</p>
+                    <a href="documentos/relatorio.pdf" target="_blank" class="btn btn-primary">Baixar Relatório Anual</a>
+                </article>
+            </div>
         </section>
 
+        <section id="projetos-destaque" class="container">
+            <h2>Projetos em Destaque</h2>
+            <div class="grid-container">
+                <article class="card col-md-6 col-lg-4">
+                    <img src="img/projeto-social.png" alt="Crianças estudando em um ambiente escolar" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Educação para o Futuro</h3>
+                        <p class="card-description">Iniciativa que oferece reforço escolar e atividades extracurriculares.</p>
+                        <div class="flex-group">
+                            <span class="badge badge-primary">Educação</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card col-md-6 col-lg-4">
+                    <img src="img/medicos-voluntarios.png" alt="Voluntários em ação de saúde comunitária" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Saúde Comunitária</h3>
+                        <p class="card-description">Programa que leva atendimento médico e odontológico básico a comunidades carentes.</p>
+                        <div class="flex-group">
+                            <span class="badge badge-secondary">Saúde</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card col-md-12 col-lg-4">
+                    <img src="img/projeto-replantar.png" alt="Voluntários plantando árvores" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Preservação Ambiental</h3>
+                        <p class="card-description">Projetos de reflorestamento e conscientização sobre a sustentabilidade.</p>
+                        <div class="flex-group">
+                            <span class="badge badge-primary">Meio Ambiente</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
 
-    <footer id="contato">
-        <section>
-            <h3>Fale Conosco</h3>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ONG Exemplo. Todos os direitos reservados.</p>
             <address>
-                <p>Rua Exemplo, 123 - Bairro ONG</p>
-                <p>CEP: 12345-678 - Cidade/Estado</p>
-                <p>Telefone: <a href="tel:+5511987654321">(11) 98765-4321</a></p>
-                <p>Email: <a href="mailto:contato@ongexemplo.org.br">contato@ongexemplo.org.br</a></p>
+                Rua da Solidariedade, 123 - Cidade Feliz, SP<br>
+                Telefone: (11) 98765-4321 | E-mail: contato@ongexemplo.org.br
             </address>
-        </section>
-        
-        <section>
-            <h3>Siga-nos</h3>
-            <a href="#" aria-label="Facebook da ONG Exemplo">Facebook</a> |
-            <a href="#" aria-label="Instagram da ONG Exemplo">Instagram</a> |
-            <a href="#" aria-label="LinkedIn da ONG Exemplo">LinkedIn</a>
-        </section>
-
-        <p>&copy; 2025 ONG Exemplo. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
-    </body>
+    <script src="js/main.js"></script>
+</body>
 </html>
