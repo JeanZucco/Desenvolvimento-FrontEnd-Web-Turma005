@@ -464,6 +464,60 @@ input[type="radio"] {
     margin-right: var(--espacamento-xs);
 }
 
+/* Estilos adicionais para o SPA e formulário */
+.form-group {
+    margin-bottom: var(--espacamento-md);
+}
+
+.help-text {
+    font-size: var(--tamanho-fonte-xs);
+    color: var(--cor-neutra-media);
+    margin-top: calc(var(--espacamento-xs) / 2);
+    display: block;
+}
+
+/* Estilos para campos inválidos (JS validation feedback) */
+input.is-invalid, textarea.is-invalid, select.is-invalid {
+    border-color: var(--cor-erro);
+    box-shadow: 0 0 0 2px rgba(244, 67, 54, 0.25);
+}
+
+/* Mensagem de erro abaixo do campo (JS validation feedback) */
+.error-message {
+    color: var(--cor-erro);
+    font-size: var(--tamanho-fonte-sm);
+    margin-top: calc(var(--espacamento-xs) / 2);
+    display: block;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-xl {
+    margin-top: var(--espacamento-xl);
+}
+
+.action-buttons {
+    gap: var(--espacamento-md);
+    margin-top: var(--espacamento-md);
+}
+
+.icon-large {
+    font-size: var(--tamanho-fonte-xxxl);
+    color: var(--cor-primaria-medio);
+    margin-bottom: var(--espacamento-sm);
+}
+
+.stats-grid .col-md-4 {
+    border-right: 1px solid var(--cor-neutra-borda);
+}
+
+.stats-grid .col-md-4:last-child {
+    border-right: none;
+}
+
+
 /* Componentes de Feedback (Alerts) */
 .alert {
     padding: var(--espacamento-sm);
@@ -529,6 +583,7 @@ footer {
     padding: var(--espacamento-xl) var(--espacamento-md);
     text-align: center;
     font-size: var(--tamanho-fonte-sm);
+    margin-top: auto; /* Garante que o footer fique no final da página com flexbox */
 }
 
 footer a {
@@ -542,6 +597,17 @@ footer a:hover {
 footer address {
     font-style: normal;
     margin-bottom: var(--espacamento-sm);
+}
+
+.social-media a {
+    color: var(--cor-neutra-fundo);
+    font-size: var(--tamanho-fonte-xl);
+    margin: 0 var(--espacamento-xs);
+}
+
+.social-media a:hover {
+    color: var(--cor-secundaria-claro);
+    text-decoration: none;
 }
 
 /* --------------------------------------------------------------------------
@@ -612,6 +678,10 @@ footer address {
 
     .dropdown-content {
         position: absolute; /* Volta o dropdown para a posição absoluta */
+    }
+
+    .stats-grid .col-md-4:first-child {
+        border-left: none; /* Remove borda da primeira coluna em tablets */
     }
 }
 
@@ -701,4 +771,66 @@ input[type="radio"]:focus-visible {
 /* Melhorar legibilidade de longos blocos de texto */
 p, li, dd, dt {
     max-width: 75ch; /* Limita a largura do texto para melhor leitura */
+}
+/* --------------------------------------------------------------------------
+   8.1. Estilos de Modo Escuro Acessível (WCAG)
+   -------------------------------------------------------------------------- */
+
+@media (prefers-color-scheme: dark) {
+    /* Cores de Fundo Invertidas */
+    body {
+        background-color: #121212; /* Fundo escuro */
+        color: var(--cor-neutra-clara); /* Texto claro */
+    }
+
+    /* Cores de Componentes */
+    header {
+        background-color: #1E1E1E;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    footer {
+        background-color: #121212;
+    }
+
+    /* Cores de Texto e Títulos */
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--cor-secundaria-claro); /* Usar azul claro nos títulos para bom contraste */
+    }
+
+    /* Cards e Formulários (Elementos que precisam de contraste) */
+    .card, form {
+        background-color: #1E1E1E;
+        border-color: #333;
+        box-shadow: none;
+    }
+
+    /* Links */
+    a {
+        color: var(--cor-secundaria-claro);
+    }
+
+    /* Entradas de Formulário */
+    input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"], textarea, select {
+        background-color: #282828;
+        border-color: #444;
+        color: var(--cor-neutra-fundo);
+    }
+    
+    /* Alternância de Seções */
+    section:nth-of-type(even) {
+        background-color: #1E1E1E; 
+    }
+    
+    /* Foco do Teclado (Manter Visível) */
+    :focus-visible {
+        outline: 3px solid var(--cor-secundaria-claro); /* Usar cor clara para garantir visibilidade no fundo escuro */
+        outline-offset: 2px;
+        border-radius: var(--borda-arredondada);
+    }
+
+    /* Ícones Sociais (Rodapé) */
+    .social-media a {
+        color: var(--cor-neutra-media);
+    }
 }

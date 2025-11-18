@@ -3,128 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ONG Exemplo: Transformando Vidas através da Educação</title>
+    <title>ONG Exemplo: Transformando Vidas</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container flex-group--space-between">
-            <h1><a href="index.html">ONG Exemplo</a></h1>
-            <button class="hamburger-menu" aria-label="Abrir menu de navegação">☰</button>
+            <h1><a href="#home">ONG Exemplo</a></h1>
             <nav>
+                <button class="hamburger-menu" aria-label="Abrir menu de navegação">
+                    <i class="fas fa-bars"></i>
+                </button>
                 <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li class="dropdown">
-                        <a href="#sobre-nos" class="dropbtn">Sobre Nós</a>
-                        <div class="dropdown-content">
-                            <a href="#missao">Missão</a>
-                            <a href="#valores-historico">Valores e Histórico</a>
-                            <a href="#equipe">Nossa Equipe</a>
-                        </div>
-                    </li>
-                    <li><a href="projetos.html">Projetos</a></li>
-                    <li><a href="cadastro.html" class="btn btn-secondary">Cadastre-se</a></li>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre-nos">Sobre Nós</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#cadastro" class="btn btn-secondary">Cadastre-se</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section id="hero" class="container" style="text-align: center; padding-top: 60px; padding-bottom: 60px;">
+    <main id="app-main">
+        </main>
+
+    <footer>
+        <div class="container flex-group--space-between flex-group--column">
+            <p>&copy; 2024 ONG Exemplo. Todos os direitos reservados.</p>
+            <address>
+                Rua da Solidariedade, 123 - Cidade Feliz, SP<br>
+                Telefone: (11) 98765-4321 | E-mail: <a href="mailto:contato@ongexemplo.org.br">contato@ongexemplo.org.br</a>
+            </address>
+            <div class="social-media">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <template id="template-home">
+        <section id="hero" class="container">
             <div class="grid-container flex-group--center">
                 <div class="col-md-12 col-lg-8">
                     <h2>Construindo um Futuro Melhor Juntos</h2>
                     <p>Através da educação e apoio comunitário, a ONG Exemplo transforma realidades, empoderando indivíduos e comunidades por mais de 10 anos.</p>
-                    <div class="flex-group--center">
-                        <a href="projetos.html" class="btn btn-primary">Conheça Nossos Projetos</a>
-                        <a href="cadastro.html" class="btn btn-outline-primary">Seja um Voluntário</a>
+                    <div class="flex-group--center action-buttons">
+                        <a href="#projetos" class="btn btn-primary">Conheça Nossos Projetos</a>
+                        <a href="#cadastro" class="btn btn-outline-primary">Seja um Voluntário</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="missao" class="container">
-            <div class="grid-container flex-group--align-start">
+            <div class="grid-container">
                 <div class="col-md-12 col-lg-6">
-                    <h2 id="missao">Nossa Missão: Onde a Ajuda Acontece</h2>
-                    <p>Há mais de 10 anos, a ONG Exemplo atua com o objetivo de **transformar realidades através da educação e do apoio comunitário.** Acreditamos que o acesso à educação de qualidade e o suporte social são pilares fundamentais para o desenvolvimento sustentável.</p>
-                    <p>Nossa dedicação vai além do ensino, criando um ambiente onde cada indivíduo se sente valorizado e capaz de alcançar seu potencial máximo. Junte-se a nós nesta jornada de impacto social.</p>
+                    <h3>Nossa Missão</h3>
+                    <p>A ONG Exemplo dedica-se a promover uma educação de qualidade, saúde e bem-estar comunitário, e a sustentabilidade ambiental. Nosso objetivo é capacitar indivíduos e comunidades a construírem um futuro mais digno, justo e próspero para todos.</p>
                 </div>
                 <div class="col-md-12 col-lg-6">
-                    <figure>
-                        <img src="img/equipe-voluntarios.png" alt="Foto da equipe de voluntários da ONG trabalhando juntos em um projeto comunitário.">
-                        <figcaption>Nossa Equipe, Nossos Heróis.</figcaption>
-                    </figure>
+                    <img src="img/equipe-voluntarios.png" alt="Grupo de voluntários trabalhando juntos" loading="lazy">
                 </div>
             </div>
         </section>
 
         <section id="valores-historico" class="container">
             <div class="grid-container">
-                <article class="col-md-12 col-lg-6">
-                    <h2 id="valores-historico">Nossos Valores e Histórico</h2>
-                    <h3>Visão e Valores:</h3>
-                    <p>Nossa base é a transparência, o respeito e o impacto social duradouro. Queremos ser a referência em gestão de projetos sociais.</p>
+                <div class="col-md-12 col-lg-6">
+                    <img src="img/equipe-voluntarios.png" alt="Pessoas diversas sorrindo e se ajudando" loading="lazy">
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <h3>Nossos Valores</h3>
                     <ul>
-                        <li>Transparência: Prestamos contas de cada recurso.</li>
-                        <li>Comprometimento: Dedicação total às causas que abraçamos.</li>
+                        <li>Solidariedade e Compaixão</li>
+                        <li>Transparência e Integridade</li>
+                        <li>Empoderamento e Autonomia</li>
+                        <li>Sustentabilidade e Impacto Duradouro</li>
                     </ul>
-                </article>
-                <article class="col-md-12 col-lg-6">
-                    <h3>Nosso Histórico de Impacto:</h3>
-                    <p>Desde a fundação, a ONG Exemplo já impactou a vida de milhares de pessoas. Nosso crescimento é reflexo da confiança de nossos apoiadores e da dedicação incansável dos voluntários.</p>
-                    <a href="documentos/relatorio.pdf" target="_blank" class="btn btn-primary">Baixar Relatório Anual</a>
-                </article>
+                    <h3>Nosso Histórico</h3>
+                    <p>Fundada em 2013, a ONG Exemplo iniciou suas atividades com pequenos projetos educacionais. Ao longo dos anos, expandiu sua atuação para diversas áreas, impactando milhares de vidas e construindo parcerias sólidas.</p>
+                </div>
             </div>
         </section>
+    </template>
 
-        <section id="projetos-destaque" class="container">
-            <h2>Projetos em Destaque</h2>
+    <template id="template-sobre-nos">
+        <section id="sobre-nos-content" class="container">
+            <h2 class="text-center">Sobre Nós</h2>
+            <p class="text-center">Conheça mais sobre a história, a equipe e os princípios que movem a ONG Exemplo.</p>
+
             <div class="grid-container">
-                <article class="card col-md-6 col-lg-4">
-                    <img src="img/projeto-social.png" alt="Crianças estudando em um ambiente escolar" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">Educação para o Futuro</h3>
-                        <p class="card-description">Iniciativa que oferece reforço escolar e atividades extracurriculares.</p>
-                        <div class="flex-group">
-                            <span class="badge badge-primary">Educação</span>
-                        </div>
-                    </div>
-                </article>
-                <article class="card col-md-6 col-lg-4">
-                    <img src="img/medicos-voluntarios.png" alt="Voluntários em ação de saúde comunitária" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">Saúde Comunitária</h3>
-                        <p class="card-description">Programa que leva atendimento médico e odontológico básico a comunidades carentes.</p>
-                        <div class="flex-group">
-                            <span class="badge badge-secondary">Saúde</span>
-                        </div>
-                    </div>
-                </article>
-                <article class="card col-md-12 col-lg-4">
-                    <img src="img/projeto-replantar.png" alt="Voluntários plantando árvores" class="card-image">
-                    <div class="card-content">
-                        <h3 class="card-title">Preservação Ambiental</h3>
-                        <p class="card-description">Projetos de reflorestamento e conscientização sobre a sustentabilidade.</p>
-                        <div class="flex-group">
-                            <span class="badge badge-primary">Meio Ambiente</span>
-                        </div>
-                    </div>
-                </article>
+                <div class="col-md-12">
+                    <h3>Quem Somos</h3>
+                    <p>A ONG Exemplo é uma organização sem fins lucrativos dedicada a promover o desenvolvimento social e a sustentabilidade em comunidades vulneráveis. Acreditamos no poder da educação, da saúde e do engajamento comunitário para transformar realidades e construir um futuro mais justo e equitativo para todos.</p>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <h3>Nossa Visão</h3>
+                    <p>Ser referência em impacto social, inspirando outras organizações e indivíduos a agirem em prol de um mundo mais solidário, onde todos tenham acesso a oportunidades e possam realizar seu potencial pleno.</p>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <h3>Nossa Equipe</h3>
+                    <p>Contamos com uma equipe multidisciplinar de voluntários e profissionais apaixonados por causas sociais. De educadores a médicos, engenheiros a artistas, cada membro contribui com seu talento e dedicação para o sucesso de nossos projetos.</p>
+                </div>
+            </div>
+
+            <h3 class="text-center mt-xl">Impacto e Resultados</h3>
+            <div class="grid-container text-center stats-grid">
+                <div class="col-md-4">
+                    <i class="fas fa-graduation-cap icon-large"></i>
+                    <h4>Mais de 5.000 Alunos Impactados</h4>
+                    <p>Através de programas de reforço escolar e oficinas.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-heartbeat icon-large"></i>
+                    <h4>Mais de 2.000 Atendimentos de Saúde</h4>
+                    <p>Em comunidades carentes, com médicos e dentistas voluntários.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-tree icon-large"></i>
+                    <h4>Mais de 10.000 Árvores Plantadas</h4>
+                    <p>Em projetos de reflorestamento e recuperação ambiental.</p>
+                </div>
             </div>
         </section>
-    </main>
+    </template>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 ONG Exemplo. Todos os direitos reservados.</p>
-            <address>
-                Rua da Solidariedade, 123 - Cidade Feliz, SP<br>
-                Telefone: (11) 98765-4321 | E-mail: contato@ongexemplo.org.br
-            </address>
-        </div>
-    </footer>
+    <template id="template-projetos">
+        <section id="projetos-list" class="container">
+            <h2 class="text-center">Nossos Projetos</h2>
+            <p class="text-center">Conheça as diversas iniciativas da ONG Exemplo que estão transformando vidas e construindo um futuro melhor para todos.</p>
+            <div class="grid-container projects-grid">
+                </div>
+        </section>
+    </template>
+
+    <template id="template-cadastro">
+        <section id="cadastro-form-content" class="container">
+            <h2 class="text-center">Cadastre-se e Faça a Diferença</h2>
+            <p class="text-center">Junte-se à nossa equipe de voluntários ou contribua para nossos projetos.</p>
+            <form id="volunteer-form">
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <div class="form-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required minlength="3">
+                        <small class="help-text">Seu nome completo para cadastro.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                        <small class="help-text">Usaremos para contato e envio de atualizações.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone (com DDD):</label>
+                        <input type="tel" id="telefone" name="telefone" pattern="^\(?\d{2}\)?[\s-]?\d{4,5}-?\d{4}$" placeholder="(XX) XXXXX-XXXX" required>
+                        <small class="help-text">Formato: (XX) XXXXX-XXXX</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="dataNascimento">Data de Nascimento:</label>
+                        <input type="date" id="dataNascimento" name="dataNascimento" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="genero">Gênero:</label>
+                        <select id="genero" name="genero" required>
+                            <option value="">Selecione...</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="nao-binario">Não Binário</option>
+                            <option value="prefiro-nao-dizer">Prefiro não dizer</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Interesses e Disponibilidade</legend>
+                    <div class="form-group">
+                        <label for="interesse">Área de Interesse:</label>
+                        <select id="interesse" name="interesse" required>
+                            <option value="">Selecione uma área...</option>
+                            <option value="educacao">Educação</option>
+                            <option value="saude">Saúde Comunitária</option>
+                            <option value="meio-ambiente">Meio Ambiente</option>
+                            <option value="administrativo">Administrativo</option>
+                            <option value="marketing">Marketing/Comunicação</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Disponibilidade:</label>
+                        <label><input type="checkbox" name="disponibilidade" value="manha"> Manhã</label>
+                        <label><input type="checkbox" name="disponibilidade" value="tarde"> Tarde</label>
+                        <label><input type="checkbox" name="disponibilidade" value="noite"> Noite</label>
+                        <label><input type="checkbox" name="disponibilidade" value="fim-semana"> Fim de Semana</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem (opcional):</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" maxlength="500"></textarea>
+                        <small class="help-text">Conte-nos um pouco sobre você e por que deseja ser voluntário.</small>
+                    </div>
+                </fieldset>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="termos" name="termos" required>
+                        Concordo com os <a href="#">Termos de Uso e Política de Privacidade</a>.
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Enviar Cadastro</button>
+                <button type="reset" class="btn btn-outline-primary">Limpar Formulário</button>
+            </form>
+        </section>
+    </template>
 
     <script src="js/main.js"></script>
 </body>
