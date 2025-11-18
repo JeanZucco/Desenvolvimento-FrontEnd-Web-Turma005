@@ -834,3 +834,57 @@ p, li, dd, dt {
         color: var(--cor-neutra-media);
     }
 }
+/* --------------------------------------------------------------------------
+   8.2. Estilos de Alto Contraste (Forced Colors)
+   -------------------------------------------------------------------------- */
+
+/* A media query forced-colors garante que o CSS só seja aplicado 
+   quando o modo de alto contraste do sistema está ativo. */
+@media screen and (forced-colors: active) {
+    /* 1. Resetar cores de fundo indesejadas */
+    body, header, footer, .card, form, section {
+        /* background-color: transparent !important; é uma prática comum, mas 
+           o sistema geralmente cuida disso. Focamos no contraste. */
+        border-color: ButtonText !important; /* Usar cores do sistema */
+    }
+
+    /* 2. Cores de Texto e Links */
+    a, a:hover, a:active {
+        color: LinkText !important; /* Cor de link padrão do sistema */
+        text-decoration: underline; /* Reforçar a indicação de link */
+        font-weight: bold; /* Reforçar links */
+    }
+    
+    /* 3. Botões e Foco (CRUCIAL para acessibilidade) */
+    .btn-primary, .btn-secondary, button {
+        background-color: transparent !important;
+        border: 2px solid ButtonText !important; /* Borda bem definida */
+        color: ButtonText !important;
+    }
+    
+    /* Foco: Garantir que o elemento em foco seja claramente visível */
+    :focus-visible {
+        outline: 3px solid Highlight !important; /* Cor de destaque do sistema */
+        outline-offset: 3px;
+    }
+    
+    /* 4. Inputs de Formulário */
+    input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"], textarea, select {
+        border: 2px solid ButtonText !important;
+        background-color: Field !important; /* Fundo do campo de texto do sistema */
+        color: FieldText !important; /* Texto do campo de texto do sistema */
+    }
+
+    /* 5. Ícones (Garantir que os ícones Font Awesome usem a cor de texto do sistema) */
+    .fa-brands, .fa-bars {
+        color: ButtonText !important;
+    }
+    
+    /* 6. Imagens: Garantir que imagens importantes não desapareçam. */
+    img[alt]:not([role="presentation"]) {
+        /* Adiciona uma borda tracejada se a imagem for importante
+           e não tem role de apresentação, para garantir que o contorno
+           ainda seja percebido pelo usuário. */
+        border: 2px dotted ButtonText;
+    }
+}
